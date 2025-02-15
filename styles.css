@@ -2,11 +2,36 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Quantico', sans-serif;
 }
 
+.quantico-regular {
+    font-family: "Quantico", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+.quantico-bold {
+    font-family: "Quantico", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+.quantico-regular-italic {
+    font-family: "Quantico", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+.quantico-bold-italic {
+    font-family: "Quantico", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
 .navbar {
-    background: #131313;
+    background: black;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -33,6 +58,7 @@
     background-image: url(images/devbase-logo.png);
     background-size: 100%;
     -webkit-background-clip: text;
+    background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
@@ -53,7 +79,6 @@
 .navbar_item {
     height: 80px;
 }
-
 
 .navbar_links {
     color: #fff;
@@ -93,7 +118,7 @@
     .navbar_container {
         display: flex;
         justify-content: space-between;
-        height: 80px;
+        height: 100%;
         z-index: 1;
         width: 100%;
         max-width: 1300px;
@@ -106,8 +131,8 @@
         margin: 0;
         width: 100%;
         position: absolute;
-/*         top: -1000px;
-        opacity: 0; */
+        top: -1000px;
+        opacity: 0;
         transition: all 0.5s ease;
         height: 50vh;
         z-index: -1;
@@ -128,12 +153,12 @@
         padding-left: 25px;
     }
 
-    #navbar_toggle.bar {
+    #navbar_toggle .bar {
         width: 25px;
         height: 3px;
         margin: 5px auto;
         transition: all 0.3s ease-in-out;
-        background-color: #fff;
+        background-color: #000000;
     }
 
     .navbar_item {
@@ -159,5 +184,146 @@
         height: 50%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80px;
     }
+
+    .navbar_toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobile-menu.is.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+}
+
+/* hero section */
+
+.hero_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px 20px;
+    height: 50%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #292929;
+    color: #ffffff;
+}
+
+.main {
+    background-color:#444444;
+}
+
+.main_container {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 100vh;
+    color: #fff;
+    z-index: 1;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main_content h1 {
+    font-size: 4rem;
+    background-color: #ffffff;
+    background-image: linear-gradient(to top, #444444 0% #fff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.main_content h2 {
+    font-size: 2rem;
+    background-color: #ffffff;
+    background-image: linear-gradient(to top, #444444 0% #fff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.main_content h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: #fff;
+    z-index: 1;
+    max-width: 1300px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.hero_btn {
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #444444 0% #fff 100%);
+    padding: 14px 32px;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.hero_btn a {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hero_btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #afafaf;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.hero_btn:hover:after {
+    color: #8d8989;
+    width: 100%;
+}
+
+.main_img-container {
+    text-align: right;
+    justify-content: end;
+}
+
+#main-img {
+    height: 100%;
+    width: 80%;
 }
