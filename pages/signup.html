@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devbase - learn to code</title>
+    <link rel="stylesheet" href="/styles/signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+        <img src="/images/devbase_1_-removebg-preview(1).png" alt="devbase-logo" id="logo"></a>
+        <div class="navbar_toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar_menu">
+            <li class="navbar_item">
+                <a href="index.html" class="navbar_links">
+                    Home
+                </a>
+            </li>
+            <li class="navbar_item">
+                <a href="resources.html" class="navbar_links">
+                    Resources
+                </a>
+            </li>
+            <li class="navbar_item">
+                <a href="community.html" class="navbar_links">
+                    Community
+                </a>
+            </li>
+            <li class="navbar_btn">
+                <a href="/" class="navbar_btn">
+                    Account
+                </a>
+            </li>
+        </ul>
+    </div>    
+    </nav>
+
+    <!-- Login Section -->
+
+  <main class="login-container">
+    <div class="form-container" id="login-form">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email" required />
+      <input type="password" id="login-password" placeholder="Password" required />
+      <button onclick="login()">Login</button>
+      <p>
+        Don't have an account?
+        <a href="#" onclick="openModal()">Sign Up</a>
+      </p>
+    </div>
+  </main>
+
+  <div id="signup-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Sign Up</h2>
+      <p>Choose one of the options below:</p>
+      <button class="oauth-btn google" onclick="signUpWithGoogle()">Sign Up with Google</button>
+      <button class="oauth-btn linkedin" onclick="signUpWithLinkedIn()">Sign Up with LinkedIn</button>
+      <button class="oauth-btn microsoft" onclick="signUpWithMicrosoft()">Sign Up with Microsoft</button>
+    </div>
+  </div>
+
+  <!-- footer-->
+
+  <footer class="footer_container">
+    <div class="footer_content">
+        <div class="footer_links">
+            <div class="footer_link_items">
+                <h2>About Us</h2>
+                <a href="/">Learn More</a>
+                <a href="/">Testimonials</a>
+                <a href="/">Join Our Team</a>
+                <a href="/">Terms of Service</a>
+            </div>
+            <div class="footer_link_items">
+                <h2>Support</h2>
+                <a href="/">Contact Us</a>
+                <a href="/">FAQ</a>
+                <a href="/">Privacy Policy</a>
+            </div>
+            <div class="footer_link_items">
+                <h2>Follow Us</h2>
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p>&copy; 2025 Devbase. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="/scripts/signup.js></script>
+</body>
+</html>
